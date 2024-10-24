@@ -40,7 +40,7 @@ function App() {
 
   function handleSelectLists(id) {
     console.log("Selecting item", id);
-    getSelectedItem(id);
+    setSelectedItem(id);
   }
 
   function backToList() {
