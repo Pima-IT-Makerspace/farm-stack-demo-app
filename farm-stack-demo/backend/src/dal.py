@@ -131,7 +131,7 @@ class ToDoDAL:
         session = None,
     ) -> ToDoList | None:
         result = await self._todo_collection.find_one_and_update(
-            {"_id": Object(doc_id)},
+            {"_id": ObjectId(doc_id)},
             {"$pull": {"items": {"id": item_id}}},
             session = session,
             return_document=ReturnDocument.AFTER,
