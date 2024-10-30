@@ -81,7 +81,7 @@ class NewItemResponse(BaseModel):
     "api/lists/{list_id}/items/",
     status_code = status.HTTP_201_CREATED,
 )
-async def create_item(list_idL: str, new_item: NewItem) -> ToDoList:
+async def create_item(list_id: str, new_item: NewItem) -> ToDoList:
     return await app.todo_dal.create_item(list_id, new_item.label)
 
 
